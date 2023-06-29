@@ -10,3 +10,20 @@
  - s : Function defining the probability of survival of larvae group based on number of defenders
 
 ## Base Model:
+The base model consists of two cases, Recessive and Dominant.
+We have two alleles 0 (Non Defenders) and 1 (Defenders) depending on the case 01 will be defending or not.
+The males in the population are haploids and females are diploids, males are produced when a female stays unmated and a ratio of males and females are produced if the female is mated. The offsprings genotype is based on the parents genotype.
+The goal of our base model is just to find out the proportion of each type of adult from first gen to the next.
+
+Current analysis present in the files:
+ - Proportion v/s Generation Time : For each case (Recessive and Dominant) we find the proportion of defenders in males and in females, we are also plotting the proportion of each genotype in the population.
+ - Heatmap of proportion of defenders : We plot a heatmap with varying costs for defenders, each square represents the difference in proportion of Female and Male defenders. The annotations represent the size of total defender population.
+
+Interesting stuff:
+ - With a very low value of 'c' (= 1), we end up observing oscillations in the population, as we increase 'a' the oscillations start to go away.
+ - For dominant case, Female defenders >= Male defenders (with u = 0; r = 0.5)
+ - For recessive case, 
+
+Stuff to do:
+ - Find an appropriate value for u and r; the population of male and females should be comparable, otherwise the heatmap will always be skewed. One option is use u=0, r=0.5, but this removes the whole non mating set, alternative required. (Seems as if difference between u=0.0 and u=0.1 with scaled r is not very different).
+ - Optimise the mating functions, triple loops are not efficient at all and extremely slow.
