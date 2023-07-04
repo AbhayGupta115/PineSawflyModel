@@ -22,8 +22,8 @@ Current analysis present in the files:
 Interesting stuff:
  - With a very low value of 'c' (= 1), we end up observing oscillations in the population, as we increase 'a' the oscillations start to go away.
  ![Oscillation GenPlot with c = 1 and a = 2](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
- - For dominant case, Female defenders >= Male defenders (with u = 0; r = 0.5)
- - For recessive case, 
+ - For dominant case, Female defenders >= Male defenders
+ - For recessive case, Male defenders >= Female defenders
 
 Stuff to do:
  - Find an appropriate value for u and r; the population of male and females should be comparable, otherwise the heatmap will always be skewed. One option is use u=0, r=0.5, but this removes the whole non mating set, alternative required. (Seems as if difference between u=0.0 and u=0.1 with scaled r is not very different).
