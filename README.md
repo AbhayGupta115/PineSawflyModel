@@ -26,5 +26,11 @@ Interesting stuff:
  - For recessive case, Male defenders >= Female defenders
 
 Stuff to do:
- - Find an appropriate value for u and r; the population of male and females should be comparable, otherwise the heatmap will always be skewed. One option is use u=0, r=0.5, but this removes the whole non mating set, alternative required. (Seems as if difference between u=0.0 and u=0.1 with scaled r is not very different).
- - Optimise the mating functions, triple loops are not efficient at all and extremely slow.
+ - [x] Find an appropriate value for u and r; the population of male and females should be comparable, otherwise the heatmap will always be skewed. One option is use u=0, r=0.5, but this removes the whole non mating set, alternative required. (Seems as if difference between u=0.0 and u=0.1 with scaled r is not very different).
+ - [x] For u > 0, the population seems to become somewhat male biased. Could be used to try different bias in populations.
+ - [x] Optimise the mating functions, triple loops are not efficient at all and extremely slow.
+
+ # References (For thesis)
+ - Davies, N.G., Ross, L. and Gardner, A. (2016), The ecology of sex explains patterns of helping in arthropod societies. Ecol Lett, 19: 862-872. https://doi.org/10.1111/ele.12621 {Larvae don&#39;t reproduce while they are larvae, but they do have reproductive value because they might survive to an age at which they are able to reproduce. So the Gardner &amp; Ross / Davies et al effect does appear to readily apply to this life history stage}
+ - A. Gardner, L. Ross, Haplodiploidy, Sex-Ratio Adjustment, and Eusociality. Am. Nat. 181, 455 E60–E67 (2013). {Sex Ratio adjustment and the costs associated with it, with different amount of benefit to the population by each sex and how defender population changes because of it.}
+ - Lots by Carita Lindstedt
