@@ -31,10 +31,10 @@ In both the recessive and dominant cases, we observe a decrease in defender prop
 Below are the heatmaps, the costs of each sex increase as we move along the axes (Male cost on y-axis, Female on x-axis), Each column shows us what shape of survival function is being used and each row shows female defender proportion, male defender proportion and difference in defender proportion (Female - Male) respectively.
 
 Recessive Case:
-![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/BM_prop_def_recessive.png)
 
 Dominant Case:
-![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/BM_prop_def_dominant.png)
 
 #### Possible Explanation: Genetic Correlation:
 The presence of mostly 01 females in the recessive case leads to a decline in overall female defender proportions. As these females do not defend, it impacts the overall proportion of female defenders. In contrast, the presence of defending 01 females in the dominant case leads to an increase in the proportion of female defenders.
@@ -75,16 +75,16 @@ Upon implementing the alternative mechanism, we plot heatmaps to visualize defen
 The heatmaps are as follows, structure is the same as the heatmaps in the previous model,
 
 Recessive Case:
-![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/ML_prop_def_recessive.png)
 
 Dominant Case:
-![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/ML_prop_def_dominant.png)
 
 
 Following this we explored the impact of varying sex ratios on defender populations by continuously varying 'r' (proportion of males produced) and 'u' (probability of females remaining unmated). Increasing 'r' led to more males in mixed-sex broods, causing females to defend less due to reduced relatedness with male siblings, resulting in a rise in male defender proportions. Similarly, higher 'u' increased male-only broods, elevating male defender proportions. These results align with empirical observations, showcasing the model's effectiveness in simulating realistic defense dynamics and highlighting the crucial role of sex ratios in shaping defense strategies in natural populations.
 
 Here we only plotted the heatmaps for the simplest shape of s(d) function, ie, linear with c = 8 and a = 2.58 (similar costs to both males and females). We show both the Recessive and Dominant case side by side.
-![Change in defender proportion with change in sex ratio. c = 8, a = 2.58, SHAPE = linear](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+![Change in defender proportion with change in sex ratio. c = 8, a = 2.58, SHAPE = linear](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/ML_prop_def_changeSR_linear.png)
 
 #### Advantages of the Alternative Mechanism:
 The removal of genetic correlation between sexes through distinct loci for defender alleles has provided more realistic results, which better reflect natural defense dynamics. By increasing the number of genotypes and explicitly accounting for active alleles in each sex, we achieved a more accurate representation of defender proportions in the population.
