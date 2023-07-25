@@ -37,6 +37,9 @@ To mitigate this genetic correlation between the sexes, we propose an alternate 
 ### Conclusion:
 Our study highlights the importance of considering genetic correlation when modeling allele-dependent defense strategies. The observed disparity in defender proportions between sexes in our base model emphasizes the need for a more refined approach to achieve a more accurate representation of real-world scenarios. By adopting a mechanism with separate loci for male and female defenders, we strive to overcome genetic correlation and enhance the robustness of our model. Further investigations using this modified approach may provide valuable insights into the dynamics of defender proportions in natural populations.
 
+
+
+
 ## Multi Locus Model
 
 ### Introduction:
@@ -61,11 +64,10 @@ Similarly, we perform genotype frequency calculations for males, illustrating th
 ### Results:
 Upon implementing the alternative mechanism, we plot heatmaps to visualize defender proportions with increasing cost to male (alpha) and female (c) defenders. Notably, in both the recessive and dominant cases, we observe a logical pattern where defender proportions in both sexes decrease with rising costs for each respective sex. Additionally, the overall pattern of differences demonstrates that higher female defender proportions are associated with higher male costs, while higher male defender proportions are linked to higher female costs. This aligns more closely with real-world observations and is consistent across both the dominant and recessive cases.
 
+Following this we explored the impact of varying sex ratios on defender populations by continuously varying 'r' (proportion of males produced) and 'u' (probability of females remaining unmated). Increasing 'r' led to more males in mixed-sex broods, causing females to defend less due to reduced relatedness with male siblings, resulting in a rise in male defender proportions. Similarly, higher 'u' increased male-only broods, elevating male defender proportions. These results align with empirical observations, showcasing the model's effectiveness in simulating realistic defense dynamics and highlighting the crucial role of sex ratios in shaping defense strategies in natural populations.
+
 ### Advantages of the Alternative Mechanism:
 The removal of genetic correlation between sexes through distinct loci for defender alleles has provided more realistic results, which better reflect natural defense dynamics. By increasing the number of genotypes and explicitly accounting for active alleles in each sex, we achieved a more accurate representation of defender proportions in the population.
-
-### Future Directions:
-With the genetic correlation-free model established, further investigations can explore the effects of varying 'r' (the proportion of males produced) and 'u' (the probability of females remaining unmated) on defender proportions. By examining how these parameters impact the number of males present in single-sex and mixed-sex broods, we can validate empirically observed trends where females tend to defend less in male-biased broods.
 
 ### Conclusion:
 Our alternative mechanism, which employs separate loci for male and female defender alleles while eliminating inactive alleles, successfully eliminates genetic correlation and improves the accuracy of defender proportion predictions. The logical pattern observed in defender proportions with varying costs for each sex provides a promising avenue for investigating the effects of 'r' and 'u' on defense strategies in different brood compositions. By continuing to refine our model, we aim to gain deeper insights into the complexities of allele-dependent defense strategies in natural populations.
