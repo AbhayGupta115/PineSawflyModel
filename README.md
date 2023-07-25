@@ -16,25 +16,33 @@
 
 ## Base Model:
 
-### Introduction:
+#### Introduction:
 In our base model, we explore two cases: Recessive and Dominant, with two alleles 0 (Non-Defenders) and 1 (Defenders). The presence of allele 01 determines whether an individual will defend or not based on their genotype (R/D). We consider haploid males and diploid females. Males arise when a female remains unmated with a probability 'u', and if mated (with probability 1-u), the offspring ratio is 'r' males and '1-r' females. Offspring genotype is determined by their parents' genotypes. Males only inherit from their mother, while females inherit 50% from each parent. Our primary focus is to determine the proportion of each type of adult from one generation to the next.
 
-### Genotypes:
-Females have three genotypes: 00, 01, and 11, while males have two genotypes: 0 and 1. A genetic correlation exists between the sexes since the same locus influences individuals' phenotypes. To address this correlation, we propose an alternative mechanism.
+#### Genotypes:
+Females have three genotypes: 00, 01, and 11, while males have two genotypes: 0 and 1. A genetic correlation exists between the sexes since the same locus influences individuals' phenotypes. To address this correlation, we propose an alternative mechanism later on.
 
-### Investigating the Effect of Cost on Defender Proportions:
+#### Investigating the Effect of Cost on Defender Proportions:
 We explore the influence of defender cost, represented by the parameter 'alpha', on defender proportions in both sexes. We construct heatmaps with 'alpha' on the y-axis for males and 'c' (cost to female defenders) on the x-axis. These heatmaps illustrate changes in defender proportions with each generation, enabling us to observe trends in each cell more clearly.
 
-### Results:
+#### Results:
 In both the recessive and dominant cases, we observe a decrease in defender proportions with increasing cost for each sex. However, we find a notable disparity in defender proportions between the sexes. In the recessive case, a higher proportion of males defend compared to females, while this pattern reverses in the dominant case. Such a discrepancy contradicts real-world observations, prompting us to investigate the underlying reasons.
 
-### Possible Explanation: Genetic Correlation:
+Below are the heatmaps, the costs of each sex increase as we move along the axes (Male cost on y-axis, Female on x-axis), Each column shows us what shape of survival function is being used and each row shows female defender proportion, male defender proportion and difference in defender proportion (Female - Male) respectively.
+
+Recessive Case:
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+
+Dominant Case:
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+
+#### Possible Explanation: Genetic Correlation:
 The presence of mostly 01 females in the recessive case leads to a decline in overall female defender proportions. As these females do not defend, it impacts the overall proportion of female defenders. In contrast, the presence of defending 01 females in the dominant case leads to an increase in the proportion of female defenders.
 
-### Addressing Genetic Correlation:
+#### Addressing Genetic Correlation:
 To mitigate this genetic correlation between the sexes, we propose an alternate mechanism. Each sex will use a different locus for the defender allele. By employing distinct loci for male and female defender alleles, we aim to uncouple the genetic correlation, leading to more realistic defender proportions in both sexes.
 
-### Conclusion:
+#### Conclusion:
 Our study highlights the importance of considering genetic correlation when modeling allele-dependent defense strategies. The observed disparity in defender proportions between sexes in our base model emphasizes the need for a more refined approach to achieve a more accurate representation of real-world scenarios. By adopting a mechanism with separate loci for male and female defenders, we strive to overcome genetic correlation and enhance the robustness of our model. Further investigations using this modified approach may provide valuable insights into the dynamics of defender proportions in natural populations.
 
 
@@ -42,10 +50,10 @@ Our study highlights the importance of considering genetic correlation when mode
 
 ## Multi Locus Model
 
-### Introduction:
+#### Introduction:
 In our previous model, we encountered a genetic correlation issue between sexes, which led to discrepancies in defender proportions in the recessive and dominant cases. To overcome this limitation, we introduce an alternative mechanism employing distinct loci for male and female defender alleles, eliminating the inactive alleles from each sex. This modification increases the number of genotypes, and the proportion of allele 1 in the female locus is represented by p<sub>f</sub>, while in the male locus, it is represented by p<sub>m</sub>. By exploring the frequency of each genotype given p<sub>f</sub> and p<sub>m</sub> in both sexes, we aim to investigate the impact of this novel approach on defender proportions.
 
-### Genotype Frequency Calculations:
+#### Genotype Frequency Calculations:
 For females, we calculate the genotype frequency table based on p<sub>f</sub> and p<sub>m</sub>. The table outlines the frequencies of genotypes resulting from combinations of alleles at the female and male loci.
 | **M. Locus\F. Locus** | **00**                           | **01**                                    | **11**                       |
 |:---------------------:|:--------------------------------:|:-----------------------------------------:|:----------------------------:|
@@ -61,15 +69,27 @@ Similarly, we perform genotype frequency calculations for males, illustrating th
 | **1**                | (1 - p<sub>f</sub>) * (p<sub>m</sub>)    | (p<sub>f</sub>) * (p<sub>m</sub>)    |
 
 
-### Results:
+#### Results:
 Upon implementing the alternative mechanism, we plot heatmaps to visualize defender proportions with increasing cost to male (alpha) and female (c) defenders. Notably, in both the recessive and dominant cases, we observe a logical pattern where defender proportions in both sexes decrease with rising costs for each respective sex. Additionally, the overall pattern of differences demonstrates that higher female defender proportions are associated with higher male costs, while higher male defender proportions are linked to higher female costs. This aligns more closely with real-world observations and is consistent across both the dominant and recessive cases.
+
+The heatmaps are as follows, structure is the same as the heatmaps in the previous model,
+
+Recessive Case:
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+
+Dominant Case:
+![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = True](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+
 
 Following this we explored the impact of varying sex ratios on defender populations by continuously varying 'r' (proportion of males produced) and 'u' (probability of females remaining unmated). Increasing 'r' led to more males in mixed-sex broods, causing females to defend less due to reduced relatedness with male siblings, resulting in a rise in male defender proportions. Similarly, higher 'u' increased male-only broods, elevating male defender proportions. These results align with empirical observations, showcasing the model's effectiveness in simulating realistic defense dynamics and highlighting the crucial role of sex ratios in shaping defense strategies in natural populations.
 
-### Advantages of the Alternative Mechanism:
+Here we only plotted the heatmaps for the simplest shape of s(d) function, ie, linear with c = 8 and a = 2.58 (similar costs to both males and females). We show both the Recessive and Dominant case side by side.
+![Change in defender proportion with change in sex ratio. c = 8, a = 2.58, SHAPE = linear](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/c14976c683fc1f6b573fcde909ccf664c4363840/outputs/GenPlot_c1_a2.png)
+
+#### Advantages of the Alternative Mechanism:
 The removal of genetic correlation between sexes through distinct loci for defender alleles has provided more realistic results, which better reflect natural defense dynamics. By increasing the number of genotypes and explicitly accounting for active alleles in each sex, we achieved a more accurate representation of defender proportions in the population.
 
-### Conclusion:
+#### Conclusion:
 Our alternative mechanism, which employs separate loci for male and female defender alleles while eliminating inactive alleles, successfully eliminates genetic correlation and improves the accuracy of defender proportion predictions. The logical pattern observed in defender proportions with varying costs for each sex provides a promising avenue for investigating the effects of 'r' and 'u' on defense strategies in different brood compositions. By continuing to refine our model, we aim to gain deeper insights into the complexities of allele-dependent defense strategies in natural populations.
 
 ## Repo navigation
