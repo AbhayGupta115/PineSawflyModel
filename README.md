@@ -94,6 +94,9 @@ Following this we explored the impact of varying sex ratios on defender populati
 Here we only plotted the heatmaps for the simplest shape of s(d) function, ie, linear with c = 8 and a = 2.58 (similar costs to both males and females). We show both the Recessive and Dominant case side by side. The cell annotations show the total defender proportion in the population.
 ![Change in defender proportion with change in sex ratio. c = 8, a = 2.58, SHAPE = linear](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/ML_prop_def_changeSR_linear.png)
 
+We also plotted the amount of males in each type of brood, ie, mixed sex and single sex along with the heatmap of the dominant case from previous figure. Here you can see the proportion of male population in mixed sex broods and the proportion of male population in single sex broods.
+![Male population in different broods with different values of u and r, SHAPE = linear, DOMINANT = True](https://github.com/AbhayGupta115/PineSawflyModel/blob/c606d2fee6dd5cfd5240f94f5899ea3e4fff5298/outputs/def_sexratio_dom_linear.png)
+
 #### Advantages of the Alternative Mechanism:
 The removal of genetic correlation between sexes through distinct loci for defender alleles has provided more realistic results, which better reflect natural defense dynamics. By increasing the number of genotypes and explicitly accounting for active alleles in each sex, we achieved a more accurate representation of defender proportions in the population.
 
