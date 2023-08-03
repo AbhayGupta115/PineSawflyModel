@@ -36,7 +36,7 @@ We explore the influence of defender cost, represented by the parameter 'alpha',
 #### Results:
 In both the recessive and dominant cases, we observe a decrease in defender proportions with increasing cost for each sex. However, we find a notable disparity in defender proportions between the sexes. In the recessive case, a higher proportion of males defend compared to females, while this pattern reverses in the dominant case. Such a discrepancy contradicts real-world observations, prompting us to investigate the underlying reasons.
 
-Below are the heatmaps, the costs of each sex increase as we move along the axes (Male cost on y-axis, Female on x-axis), Each column shows us what shape of survival function is being used and each row shows female defender proportion, male defender proportion and difference in defender proportion (Female - Male) respectively.
+Below are the heatmaps, the costs of each sex increase as we move along the axes (Male cost on y-axis, Female on x-axis), Each column shows us what shape of survival function is being used and each row shows female defender proportion, male defender proportion and difference in defender proportion (Female - Male) respectively. The cell annotations of the last row shows the total defender proportion in the population.
 
 Recessive Case:
 ![Change in defender proportion with increasing costs. u = 0.1, r = 0.475, DOMINANT = False](https://github.com/AbhayGupta115/PineSawflyModel/blob/6067db961b2c9da56df1e5cbae0f1fca3cc9bb5d/outputs/BM_prop_def_recessive.png)
@@ -91,7 +91,7 @@ Dominant Case:
 
 Following this we explored the impact of varying sex ratios on defender populations by continuously varying 'r' (proportion of males produced) and 'u' (probability of females remaining unmated). Increasing 'r' led to more males in mixed-sex broods, causing females to defend less due to reduced relatedness with male siblings, resulting in a rise in male defender proportions. Similarly, higher 'u' increased male-only broods, elevating male defender proportions. These results align with empirical observations, showcasing the model's effectiveness in simulating realistic defense dynamics and highlighting the crucial role of sex ratios in shaping defense strategies in natural populations.
 
-Here we only plotted the heatmaps for the simplest shape of s(d) function, ie, linear with c = 8 and a = 2.58 (similar costs to both males and females). We show both the Recessive and Dominant case side by side.
+Here we only plotted the heatmaps for the simplest shape of s(d) function, ie, linear with c = 8 and a = 2.58 (similar costs to both males and females). We show both the Recessive and Dominant case side by side. The cell annotations show the total defender proportion in the population.
 ![Change in defender proportion with change in sex ratio. c = 8, a = 2.58, SHAPE = linear](https://github.com/AbhayGupta115/Masters_2023_DrHannaK/blob/b25f8f7db2e9ae74477baddd70a5f2b756b23e62/outputs/ML_prop_def_changeSR_linear.png)
 
 #### Advantages of the Alternative Mechanism:
