@@ -1,0 +1,50 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Sex-biased cooperation among immature peers: it matters
+  who helps whom
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Abhay
+    family-names: Gupta
+  - given-names: Hanna
+    family-names: Kokko
+  - given-names: Raphael
+    family-names: Ritter
+identifiers:
+  - type: doi
+    value: 10.1098/rspb.2025.1891
+repository-code: 'https://github.com/AbhayGupta115/PineSawflyModel'
+abstract: >-
+  Our understanding of sex-biased helping has progressed
+  from a historical emphasis on relatedness differences
+  caused by haplodiploidy to an understanding of the role
+  played by the rarer-sex effect. Theory to date typically
+  assumes that offspring help their mother. We show that an
+  alternative, peer-to-peer cooperation, can shed light on
+  the interaction of helpers and the recipients of help. In
+  pine sawfly (Diprion pini) larvae, larval peer-to-peer
+  cooperation takes the form of collective, and individually
+  costly, antipredator behaviour. Larvae typically occur in
+  mixed-sex groups, but females can lay unfertilized eggs
+  that develop into haploid males, which produces male-only
+  broods. Female-biased sex ratios typically select for
+  female-biased helping, and our model here matches
+  empirical findings. Alternative scenarios provide insight
+  too: (1) if genetic constraints permit no sex-specificity
+  in behaviour beyond haploid males expressing all alleles
+  while helping in females can be recessive or dominant,
+  then the sex difference in helping simply reflects the
+  effects of dominance. (2) Female-biased helping can also
+  emerge under male-biased sex ratios, if males are mostly
+  produced in single-sex broods by unmated mothers. While
+  this last example remains hypothetical for D. pini, it
+  highlights an underappreciated point: the rarer-sex effect
+  impacts solutions not only by modifying fitness prospects
+  of the helper, but also of the recipient of help.
+license: MIT
